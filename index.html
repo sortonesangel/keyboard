@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Login</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Sign Up Form -->
+        <div class="form-container active" id="signup-form">
+            <h1>Sign Up</h1>
+            <form action="auth.php" method="POST">
+                <input type="hidden" name="register" value="1">
+                
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+                
+                <label for="middle-name">Middle Name</label>
+                <input type="text" id="middle-name" name="middle_name" placeholder="Enter your middle name">
+                
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address">
+                
+                <label for="contact-number">Contact Number</label>
+                <input type="tel" id="contact-number" name="contact_number" placeholder="Enter your contact number">
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+                
+                <input type="submit" value="Sign Up">
+            </form>
+            <p>By clicking the sign-up button, you agree to our 
+                <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.
+            </p>
+            <p class="p2">Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+            <h1>Login</h1>
+            <form action="auth.php" method="POST">
+                <input type="hidden" name="login" value="1">
+                
+                <label for="login-username-email">Username or Email</label>
+                <input type="text" id="login-username-email" name="username_or_email" placeholder="Enter your username or email" required>
+                
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignUpForm()">Sign up here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showLoginForm() {
+            document.getElementById('signup-form').classList.remove('active');
+            document.getElementById('login-form').classList.add('active');
+        }
+
+        function showSignUpForm() {
+            document.getElementById('login-form').classList.remove('active');
+            document.getElementById('signup-form').classList.add('active');
+        }
+    </script>
+</body>
+</html>

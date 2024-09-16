@@ -1,0 +1,120 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/1d/72/a2/1d72a2ecc5710dcabf7c0e95e3bccb16.gif');
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    width: 280px;
+    margin: auto;
+    background: linear-gradient(135deg, rgba(219, 127, 255, 0.8), rgba(86, 144, 167, 0.8));
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 10px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+.signup-box {
+    position: center;
+    color: white; 
+    width: 300px;
+    margin: auto;
+    background: rgb(64, 184, 240);
+    border-radius: 20px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+.form-container {
+    display: none;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-container.active {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+    width: 85%;
+    padding: 4px;
+    margin: 6px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 10, 148);
+    background: rgba(255, 255, 255, 0.6);
+    color: #333;
+}
+
+input[type="button"] {
+    width: 60%;
+    padding: 6px;
+    margin-top: 8px;
+    background-color: #07a11a;
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #05b81c;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+}
+
+form {
+    width: 230px;
+    margin: auto;
+    padding-top: 8px;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #fff;
+}
+
+form input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid greenyellow;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 6px;
+}
+
+p {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #030511;
+}
+
+.p2 {
+    text-align: center;
+    color: rgb(18, 101, 196);
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.p2 a {
+    color: rgb(202, 20, 14);
+}
+
